@@ -1,7 +1,7 @@
 import sys, random, time, socket
 
 class dosTest():
-    def __init__(dos, ip, port, sc = 200):
+    def __init__(dos, ip, port, sc):
         dos._ip = ip
         dos._port = port
         dos._headers = []
@@ -39,7 +39,7 @@ class dosTest():
 
 
 if __name__ == "__main__":
-    dost = dosTest("192.168.219.102", 46826, sc = 200)
+    dost = dosTest("192.168.219.102", 46826, 500)
     #this is defender's IP and open port number from torrent client.
     #also tested with port number 80 to see if the timeout error is actually working.(it worked)
     dost.attack(timeout = 60 * 10)
